@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/ivPlantImage"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:src="@drawable/image_card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/tvPlantName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintTop_toTopOf="@id/ivPlantImage"
+            app:layout_constraintStart_toEndOf="@id/ivPlantImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="16sp"
+            android:textColor="#74CE62"
+            app:layout_constraintTop_toBottomOf="@id/tvPlantName"
+            app:layout_constraintStart_toEndOf="@id/ivPlantImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hapus"
+            android:backgroundTint="#FF4444"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivPlantImage"
+            app:layout_constraintStart_toEndOf="@id/ivPlantImage"
+            android:layout_marginStart="8dp" />
+
+        <Button
+            android:id="@+id/btnDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail"
+            android:backgroundTint="#74CE62"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/btnDelete"
+            app:layout_constraintStart_toEndOf="@id/btnDelete"
+            android:layout_marginStart="8dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
