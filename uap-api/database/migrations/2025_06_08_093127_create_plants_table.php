@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('plants', function (Blueprint $table) {
             $table->id();
+            $table->string('plant_name', 100)->unique();
+            $table->string('description', 1000);
+            $table->string('price', 50);
             $table->timestamps();
         });
     }
